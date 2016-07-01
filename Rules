@@ -1,28 +1,48 @@
 #!/usr/bin/env ruby
 
-compile '/**/*.html' do
-  layout '/default.*'
+compile "/posts/**/*.html" do
+  filter :erb
+  layout "/post.html"
+  snapshot :formatted_post
+  layout "/default.html"
 end
 
-# This is an example rule that matches Markdown (.md) files, and filters them
-# using the :kramdown filter. It is commented out by default, because kramdown
-# is not bundled with Nanoc or Ruby.
-#
-#compile '/**/*.md' do
-#  filter :kramdown
-#  layout '/default.*'
-#end
-
-route '/**/*.{html,md}' do
-  if item.identifier =~ '/index.*'
-    '/index.html'
-  else
-    item.identifier.without_ext + '/index.html'
-  end
+compile "/**/*.html" do
+  filter :erb
+  layout "/default.html"
 end
 
-compile '/**/*' do
-  write item.identifier.to_s
+compile "/posts/**/*.mkd" do
+  filter :kramdown
+  filter :erb
+  layout "/post.html"
+  snapshot :formatted_post
+  layout "/default.html"
 end
 
-layout '/**/*', :erb
+compile "/**/*.mkd" do
+  filter :kramdown
+  filter :erb
+  layout "/default.html"
+end
+
+route "/index.html" do
+  @item.identifier.to_s
+end
+
+route %r"/posts/(\d{4})--([^\./]*).*" do |number, slug|
+  created_at = @item[:created_at]
+  year = created_at.year
+  month = created_at.month.to_s.rjust(2, "0")
+  day = created_at.day.to_s.rjust(2, "0")
+
+  "/posts/#{year}/#{month}/#{day}/#{slug}/index.html"
+end
+
+route "/**/*.{html,mkd}" do
+  @item.identifier.without_ext + "/index.html"
+end
+
+passthrough "/**/*"
+
+layout "/**/*", :erb

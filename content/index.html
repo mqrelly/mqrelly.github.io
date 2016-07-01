@@ -1,4 +1,7 @@
 ---
-title: This is the Title
+title: index
 ---
-<h1>Coming soon...</h1>
+
+<% sorted_articles.each do |post_rep|  %>
+<%= post_rep.compiled_content(:snapshot => :formatted_post) %>
+<% end %>
