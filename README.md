@@ -4,10 +4,16 @@ mqrelly.github.io
 Autopsy of a programmer's thoughts
 
 
+Resources
+---------
+Used [Tufte CSS][tufte] as the basis of formatting. 
+
+
 Todo
 ----
 
-- Some basic layout for the blog like content
+- An About page with credits to used resources
+- Tagging
 - Minimal and lightweight stylesheets
   - Maybe with a SASS pipeline
 - Rake task to publish site to GitHub Pages
@@ -17,3 +23,6 @@ Todo
 - Atom feed
 - XMLSitemap
 - Write VIM syntax highlighters and snippets
+
+
+[tufte]: https://edwardtufte.github.io/tufte-css/

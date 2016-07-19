@@ -1,3 +1,7 @@
-<h1 class="title"><%= item[:title] %></h1>
+<div class="post">
+  <h1 class="title"><%= item[:title] %></h1>
+  <p class="subtitle"><%= item[:subtitle] %></p>
+  <p class="credits"><%= item[:created_at] %>, by <%= item[:author] %></p>
 
-<%= yield %>
+  <%= yield %>
+</div>
