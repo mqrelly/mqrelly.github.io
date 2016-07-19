@@ -1,0 +1,63 @@
+---
+kind: article
+title: A welcome post
+subtitle: So it begins...
+author: mqrelly
+created_at: 2016-07-20
+---
+
+...my web-log, I mean. A medium to make record of my deeds, mistakes, and
+triumphs as a programmer.
+
+This has been a _long_ time coming. About a decade long. I made a few homepages
+back in my high school days, and although I do mostly web application
+development this days, but I never had a real site for myself.
+
+
+The purpose of this web-log--or "[blog][blog]" as some of you cool kids say--is
+multifold.
+
+It definitely will have the usual "braindump" aspect as so [many other
+tinkers](https://duckduckgo.com/?q=braindump+blog) have done. I come across
+many problems. Most of them aren't interesting nor really relevant. They're
+just part of the accidental complexity: some infrastructure nuances or tool
+version incompatibilities. They shouldn't exist at all.  But since they gonna
+be there the next time too, and I already spent a disproportional amount of
+time solving them, I might as well write them down so I don't have to remember.
+If this helps a fellow programmer all the better.
+
+You know the saying: [the best way to Learn is to
+Teach](https://duckduckgo.com/?q=the+best+way+to+Learn+is+to+Teach). I figured
+the second best thing to teaching is writing about something. So I intend to have
+articles which analyze and synthesize a topic.
+
+I'm not a native English speaker. So this will be a great opportunity to hone
+my language skills too. Maybe my inchoate mumbling will transcend into clear
+sentences.
+
+I've got the advise from colleges and writers to start a blog as a
+career-booster. As much as I'm uncomfortable with the whole *be-your-own-brand*
+and *market-yourself-to-success* notion, I have to admit it has real value to
+it's core--and the industry just loves it. So I try to work on this angle as
+well.
+
+I make this blog in [Nanoc][nanoc]. Because I always liked the idea of static
+site generators.  And because I already know and use [Jekyll][jekyll]--I wanted
+to learn something new. At the time of writing this the site is rather minimal.
+This is intentional. I only allow myself to program auxiliary features or tweak
+on the design when I also write some content.  Otherwise I might end up
+polishing and rewriting a hollow shell that never gets published.  This welcome
+post has earned me the bare minimum of a Nanoc blog. I might have a few posts
+about how I do it in Nanoc if it deems worthy enough.
+
+
+And finally maybe I always wanted to have a blog. And subconsciously it might
+have nagged me ever since. Now I can cross out that on my list too :)
+
+
+Happy reading,  
+*mq*
+
+[blog]: https://en.wikipedia.org/wiki/Blog "Definition of blog"
+[nanoc]: http://nanoc.ws/ "Nanoc: a static-site generator written in Ruby"
+[jekyll]: http://jekyllrb.com/docs/home/ "Jekyll - Simple, blog-aware, static sites"
