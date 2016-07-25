@@ -16,7 +16,6 @@ Todo
 - Tagging
 - Minimal and lightweight stylesheets
   - Maybe with a SASS pipeline
-- Rake task to publish site to GitHub Pages
 - Add custom data sources for
   - Current version from git HEAD
   - Changelog from git history
